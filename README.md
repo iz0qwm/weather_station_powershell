@@ -6,3 +6,7 @@ More informations on:
 http://www.kwos.it/joomla/weather-monitoring/weather-stations/apogee-dygraphs
 
 http://www.kwos.it/joomla/weather-monitoring/weather-stations/apogee-weewx
+
+Installation:
+Download https://github.com/cathodic-protection-co/AdamLib
+In the same directory install this repository
