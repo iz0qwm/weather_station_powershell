@@ -1,0 +1,56 @@
+Dati del: <b>11-05-2019 23:46:16</b>
+------------------------------
+Lettura Excitation: 2.5294 volt
+Lettura Sensore: 1.4945 volt
+Resistenza Sens1: 17242.56273001 ohm
+TempKelvin Sens1: 286.168766557804 &#176;K
+<b>Temperatura ST-110: 13 &#176;C</b>
+------------------------------
+Lettura barometro: 3.9438 V
+Pressione: 977.7484 hPa
+<b>QNH: 1011.37 hPa</b>
+------------------------------
+Lettura pyranometer: 0.0003 V
+<b>Radiazione solare: 1.5 W/m2</b>
+------------------------------
+Lettura counter: 818
+Velocit&#225; ventola: 4499 RPM
+------------------------------
+Lettura counter: 0
+<b>Accumulo TB: 0 mm</b>
+<b>Intensit&#225;:  0 mm/h</b>
+------------------------------
+Lettura Sensore: 0.5304 volt
+<b>Temperatura HC2-S3: 13 &#176;C</b>
+------------------------------
+Lettura umidit&#225;: 0.797 volt
+<b>Umidit&#225;:  81.2 %</b>
+------------------------------
+Velocit&#225; mps: 0 mps
+<b>Velocit&#225; kmh:  0 km/h</b>
+------------------------------
+<b>Direzione vento: 237 &#176; - SW</b>
+------------------------------
+<b>Tipo precipitazione: nessuna</b>
+<b>Intensit&#225;:  mm/h</b>
+<b>Accumulo:  mm</b>
+------------------------------
+Setting velocit&#225; ventola:
+Rad. > 800
+OK: YPWMTX01-C201F.APOGEE-RPM.set_dutyCycle = 100.000000.
+------------------------------
+<b>Temp. ST-110 MAX oggi: 20.8 &#176;C</b>
+<b>Temp. ST-110 MIN oggi: 8.8 &#176;C</b>
+<b>Temp. HC2-S3 MAX oggi: 21.7 &#176;C</b>
+<b>Temp. HC2-S3 MIN oggi: 8.8 &#176;C</b>
+<b>Umidit&#225; MAX oggi: 94.725 &#37;</b>
+<b>Umidit&#225; MIN oggi: 44.025 &#37;</b>
+<b>Radiazione MAX oggi: 1386.5 W/m2</b>
+<b>WindSpeed MAX oggi: 7.67 Km/h</b>
+<b>WindDir AVG oggi: 220.92 - SW</b>
+<b>Rain Rate MAX oggi: 10.66 mm/h</b>
+<b>Rain accum. oggi: 1 mm</b>
+<b>Tipo precip. oggi: nessuna pioggia</b>
+<b>Rain Rate TB MAX oggi: 0 mm/h</b>
+<b>Rain accum. TB oggi: 0 mm</b>
+------------------------------
