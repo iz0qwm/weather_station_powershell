@@ -9,4 +9,6 @@ http://www.kwos.it/joomla/weather-monitoring/weather-stations/apogee-weewx
 
 Installation:<br>
 <li>Download https://github.com/cathodic-protection-co/AdamLib
-<li>In the same directory install this repository
+<li>Compile it
+<li>In the same directory where there is AdamCmd.exe install this repository
+<li>Download and install in the same directory the YPwmOutput.exe. Info here: http://www.yoctopuce.com/EN/products/usb-actuators/yocto-pwm-tx
