@@ -1161,10 +1161,10 @@ $invia_FTP = {
 cd C:\Users\Ruggero\AdamLib-master\AdamCmd\bin\Debug\netcoreapp2.1\win7-x64\publish\
 
 Write-Host "Invio su FTP KWOS ogni 3 minuti"
-$server = "ftp.kwos.it"
+$server = "ftp.******.**"
 $filelist = "pluviometrotb_single.txt pluviometro_single.txt windspeed_single.txt umidita_single.txt pressione_single.txt radiazione_single.txt winddir_single.txt temperatura_single.txt temperatura2_single.txt apogee_pressione.txt apogee_umidita.txt apogee_temp.txt apogee_rad.txt apogee_rpm.txt apogee_status.txt apogee_windspeed.txt apogee_winddir.txt apogee_pluviometro.txt"   
-$user = "2748826@aruba.it"
-$password = "RaDa0707"
+$user = "************"
+$password = "**********"
 $dir = "/www.kwos.org/apogee/"
 
 "open $server
@@ -1180,8 +1180,8 @@ Write-Host "Invio su FTP 192.168.2.205 ogni 3 minuti"
 #
 $server = "192.168.2.205"
 $filelist = "apogee_temp_single.txt apogee_temp2_single.txt apogee_radiation_single.txt"   
-$user = "root"
-$password = "1"
+$user = "**********"
+$password = "******"
 $dir = "/root/"
 
 "open $server
