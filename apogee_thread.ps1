@@ -1,4 +1,4 @@
-Ôªø
+
 # Ferma tutti i Job
 Remove-Job *
 
@@ -50,7 +50,7 @@ $last_acc_pluvio_archive = [double]::Parse($last_acc_pluvio_archive)
 $last_acc_pluviotb = [double]::Parse($last_acc_pluviotb)
 $last_acc_pluviotb_archive = [double]::Parse($last_acc_pluviotb_archive)
 
-# Se l'accumulo nella memoria tampone √® 0 cerco in archive
+# Se l'accumulo nella memoria tampone Ë 0 cerco in archive
 If ( $last_acc_pluvio -eq $null -OR $last_acc_pluvio -eq 0.0 )  {
     $lastmem_acc_pluvio = $last_acc_pluvio_archive
 } Else {
@@ -160,7 +160,7 @@ if ((Get-Item $file).length -gt 80kb) {
     "Data,Radiazione solare" | Out-File 'apogee_rad.txt'
     "Data, RPM" | Out-File 'apogee_rpm.txt'
     "Data, Direzione vento" | Out-File 'apogee_winddir.txt'
-    "Data, Velocit√† vento" | Out-File 'apogee_windspeed.txt'
+    "Data, Velocit‡ vento" | Out-File 'apogee_windspeed.txt'
     "Data, Pressione" | Out-File 'apogee_pressione.txt'
     "Data, Disdrometro acc., Disdrometro intens., Pluviom. acc., Pluviom. intens." | Out-File 'apogee_pluviometro.txt'
     Write-Host "RESET FILES - RESET FILES - RESET FILES"
@@ -215,7 +215,7 @@ Write-Host "TempKelvin Sens1: $TempKelvinSens1"
 "TempKelvin Sens1: $TempKelvinSens1 &#176;K" | Out-File 'apogee_status_COM5.txt' -Append
 
 $TempCelsiusSens1 = [math]::Round(($TempKelvinSens1 - 273.15),1)
-Write-Host "TempCelsius Sens1: $TempCelsiusSens1 ¬∞C"
+Write-Host "TempCelsius Sens1: $TempCelsiusSens1 ∞C"
 "<b>Temperatura ST-110: $TempCelsiusSens1 &#176;C</b>" | Out-File 'apogee_status_COM5.txt' -Append
 
 
@@ -352,7 +352,7 @@ $rpm = $countCN0_dec*5.5
 Write-Host "Lettura counter: $countCN0 - $countCN0_dec"
 "Lettura counter: $countCN0_dec" | Out-File 'apogee_status_COM5.txt' -Append
 
-Write-Host "Velocit√† ventola: $rpm RPM"
+Write-Host "Velocit‡ ventola: $rpm RPM"
 "Velocit&#225; ventola: $rpm RPM" | Out-File 'apogee_status_COM5.txt' -Append
 
 
@@ -397,7 +397,7 @@ Write-Host "Accumulo TB: $acc_pluviotb mm"
 
 
 ###############
-# Calcolo intensit√† pluvio TB in mm/min
+# Calcolo intensit‡ pluvio TB in mm/min
 # Leggo l'ultimo valore di accumulo scritto un minuto prima nel tampone o in archive
 Import-Module PSSQLite
 $Database = "C:\Users\Ruggero\AdamLib-master\AdamCmd\bin\Debug\netcoreapp2.1\win7-x64\publish\apogee.sdb"
@@ -412,7 +412,7 @@ If ( $intens_pluviotb -lt 0.1 ) {
 }
 
 
-Write-Host "Intensit√†: $intens_pluviotb mm/h"
+Write-Host "Intensit‡: $intens_pluviotb mm/h"
 "<b>Intensit&#225;:  $intens_pluviotb mm/h</b>" | Out-File 'apogee_status_COM5.txt' -Append
 
 Write-Host "-------------------------------------"
@@ -428,14 +428,14 @@ $TempCelsiusSens2 = [math]::Round(([double]::Parse($sensVin3)*100)-40,1)
 $difftemp=[math]::abs($TempCelsiusSens2-$TempCelsiusSens1)
 If ( $difftemp -gt 4 ) {
     Write-Host "TempSens2-TempSens1 = $difftemp"
-    Write-Host "Lettura TempCelsiusSens2 ERRORE: $sensVin3 V - $TempCelsiusSens2 ¬∞C"  
+    Write-Host "Lettura TempCelsiusSens2 ERRORE: $sensVin3 V - $TempCelsiusSens2 ∞C"  
     $TempCelsiusSens2=$TempCelsiusSens1
 } Else {
     Write-Host "TempSens2-TempSens1 = $difftemp"
     Write-Host "Lettura TempCelsiusSens2 OK: $sensVin3 V - $TempCelsiusSens2"
 }
 
-Write-Host "TempCelsiusSens2: $TempCelsiusSens2 ¬∞C"
+Write-Host "TempCelsiusSens2: $TempCelsiusSens2 ∞C"
 "Lettura Sensore: $sensVin3 volt" | Out-File 'apogee_status_COM5.txt' -Append
 "<b>Temperatura HC2-S3: $TempCelsiusSens2 &#176;C</b>" | Out-File 'apogee_status_COM5.txt' -Append
 
@@ -458,9 +458,9 @@ $HumSens = $HumSens + 1.5
 
 $Hum=[math]::Round($HumSens,1)
 
-Write-Host "Lettura umidit√†: $sensVin4"
+Write-Host "Lettura umidit‡: $sensVin4"
 "Lettura umidit&#225;: $sensVin4 volt"  | Out-File 'apogee_status_COM5.txt' -Append
-Write-Host "Umidit√†: $Hum %"
+Write-Host "Umidit‡: $Hum %"
 "<b>Umidit&#225;:  $Hum %</b>" | Out-File 'apogee_status_COM5.txt' -Append
 
 Write-Host "-------------------------------------"
@@ -579,9 +579,9 @@ If ( $Vkmh_round -gt 100 ) {
 }
 
 
-Write-Host "Velocit√† mph: $Vmps mps"
+Write-Host "Velocit‡ mph: $Vmps mps"
 "Velocit&#225; mps: $Vmps mps" | Out-File 'apogee_status_COM6.txt'
-Write-Host "Velocit√† kmh: $Vkmh_round km/h"
+Write-Host "Velocit‡ kmh: $Vkmh_round km/h"
 "<b>Velocit&#225; kmh:  $Vkmh_round km/h</b>" | Out-File 'apogee_status_COM6.txt' -Append
 
 
@@ -596,7 +596,7 @@ Write-Host "-------------------------------------"
 
 $heading=Output-Heading -direction $direction
 
-Write-Host "Direzione vento: $direction ¬∞ - $heading"
+Write-Host "Direzione vento: $direction ∞ - $heading"
 "<b>Direzione vento: $direction &#176; - $heading</b>" | Out-File 'apogee_status_COM6.txt' -Append
 
 
@@ -696,7 +696,7 @@ Else { $tipo_pluvio = "nessuna" }
 
 Write-Host "Tipo precipitazione: $tipo_pluvio"
 "<b>Tipo precipitazione: $tipo_pluvio</b>" | Out-File 'apogee_status_COM7.txt'
-Write-Host "Intensit√†: $intens_pluvio mm/h"
+Write-Host "Intensit‡: $intens_pluvio mm/h"
 "<b>Intensit&#225;: $intens_pluvio mm/h</b>" | Out-File 'apogee_status_COM7.txt' -Append
 Write-Host "Accumulo: $acc_pluvio mm"
 "<b>Accumulo: $acc_pluvio mm</b>" | Out-File 'apogee_status_COM7.txt' -Append
@@ -871,7 +871,7 @@ $acc_pluviotb = [double]::Parse($acc_pluviotb)
 $lastmem_acc_pluvio = [double]::Parse($lastmem_acc_pluvio)
 $lastmem_acc_pluviotb = [double]::Parse($lastmem_acc_pluviotb)
 
-# Ora calcolo istantaneo sottraendo attuale da DB tampone se non √® 0
+# Ora calcolo istantaneo sottraendo attuale da DB tampone se non Ë 0
 
 $inst_acc_pluvio = $acc_pluvio - $lastmem_acc_pluvio
 $inst_acc_pluviotb = $acc_pluviotb - $lastmem_acc_pluviotb
@@ -916,9 +916,9 @@ Invoke-SqliteQuery -DataSource $Database -Query $query_tampone
 
 ###############
 # 
-# Setting velocit√† ventola dipendente da radiazione e vento 
+# Setting velocit‡ ventola dipendente da radiazione e vento 
 #
-Write-Host "Setting velocit√† ventola:"
+Write-Host "Setting velocit‡ ventola:"
 "Setting velocit&#225; ventola:"  | Out-File 'apogee_status_END.txt'
 
 # Prendo il valore massimo del vento nel tampone per non fare attacca e stacca alla ventola
@@ -1021,10 +1021,10 @@ $tipo_pluvio_today=Invoke-SqliteQuery -DataSource $Database -Query "SELECT DISTI
 $intens_pluviotb_max=Invoke-SqliteQuery -DataSource $Database -Query "SELECT MAX(rainRatetb) FROM archive WHERE dateTime>$beginoftoday AND dateTime<=$unixtime" -As SingleValue
 $acc_pluviotb_today=Invoke-SqliteQuery -DataSource $Database -Query "SELECT MAX(raintb) FROM archive WHERE dateTime>$beginoftoday AND dateTime<=$unixtime" -As SingleValue
 
-Write-Host "Temp. ST-110 MAX oggi: $temp_max ¬∞C"
-Write-Host "Temp. ST-110 MIN oggi: $temp_min ¬∞C"
-Write-Host "Temp. HC2-S3 MAX oggi: $temp2_max ¬∞C"
-Write-Host "Temp. HC2-S3 MIN oggi: $temp2_min ¬∞C"
+Write-Host "Temp. ST-110 MAX oggi: $temp_max ∞C"
+Write-Host "Temp. ST-110 MIN oggi: $temp_min ∞C"
+Write-Host "Temp. HC2-S3 MAX oggi: $temp2_max ∞C"
+Write-Host "Temp. HC2-S3 MIN oggi: $temp2_min ∞C"
 Write-Host "Umidita MAX oggi: $hum_max %"
 Write-Host "Umidita MIN oggi: $hum_min %"
 Write-Host "Radiazione MAX oggi: $rad_max W/m2"
@@ -1089,11 +1089,11 @@ $Database = "C:\Users\Ruggero\AdamLib-master\AdamCmd\bin\Debug\netcoreapp2.1\win
 # Sul database vengono inseriti i valori presi dalla tabella tampone
 #
 If ($rad -lt 10) {
-    # Radiazione solare <10 vuol dire che √® notte. Prendo la minima del tampone
+    # Radiazione solare <10 vuol dire che Ë notte. Prendo la minima del tampone
     $TempCelsiusSens1=Invoke-SqliteQuery -DataSource $Database -Query "SELECT MIN(outTemp) FROM tampone" -As SingleValue
     $TempCelsiusSens2=Invoke-SqliteQuery -DataSource $Database -Query "SELECT MIN(outTemp2) FROM tampone" -As SingleValue
 } else {
-    # Radiazione solare >10 vuol dire che √® giorno. Prendo la massima del tampone
+    # Radiazione solare >10 vuol dire che Ë giorno. Prendo la massima del tampone
     $TempCelsiusSens1=Invoke-SqliteQuery -DataSource $Database -Query "SELECT MAX(outTemp) FROM tampone" -As SingleValue
     $TempCelsiusSens2=Invoke-SqliteQuery -DataSource $Database -Query "SELECT MAX(outTemp2) FROM tampone" -As SingleValue
 }
@@ -1161,9 +1161,9 @@ $invia_FTP = {
 cd C:\Users\Ruggero\AdamLib-master\AdamCmd\bin\Debug\netcoreapp2.1\win7-x64\publish\
 
 Write-Host "Invio su FTP KWOS ogni 3 minuti"
-$server = "ftp.******.**"
+$server = "ftp.kwos.it"
 $filelist = "pluviometrotb_single.txt pluviometro_single.txt windspeed_single.txt umidita_single.txt pressione_single.txt radiazione_single.txt winddir_single.txt temperatura_single.txt temperatura2_single.txt apogee_pressione.txt apogee_umidita.txt apogee_temp.txt apogee_rad.txt apogee_rpm.txt apogee_status.txt apogee_windspeed.txt apogee_winddir.txt apogee_pluviometro.txt"   
-$user = "************"
+$user = "*******"
 $password = "**********"
 $dir = "/www.kwos.org/apogee/"
 
@@ -1180,8 +1180,8 @@ Write-Host "Invio su FTP 192.168.2.205 ogni 3 minuti"
 #
 $server = "192.168.2.205"
 $filelist = "apogee_temp_single.txt apogee_temp2_single.txt apogee_radiation_single.txt"   
-$user = "**********"
-$password = "******"
+$user = "*********"
+$password = "*****"
 $dir = "/root/"
 
 "open $server
@@ -1226,4 +1226,3 @@ Write-Host "====================================="
 # Fine loop
 Start-Sleep -Seconds 60
 }
-
