@@ -21,7 +21,7 @@ while ($true) {
                     $bytes = [System.Text.Encoding]::ASCII.GetByteCount($stringa)
                     $stream.Write([text.Encoding]::Ascii.GetBytes($stringa), 0, $bytes)
                     [console]::WriteLine($stringa)
-                    Start-Sleep -Seconds 30
+                    Start-Sleep -Seconds 60
                 } catch {
                     $reader.Dispose()
                     $stream.Dispose()
